@@ -3,8 +3,8 @@ import Layout from "./../components/Layout/Layout";
 import { BiColor, BiMailSend, BiPhoneCall, BiSupport } from "react-icons/bi";
 const Contact = () => {
   return (
-    <Layout  >
-      <div className="row contactus " style={{marginBlock:"30px"}}>
+    <Layout title={"Contact us - Ecommer app"}>
+      <div className="row contactus">
         <div className="col-md-6 ">
           <img
             src="/images/contactus.jpeg"

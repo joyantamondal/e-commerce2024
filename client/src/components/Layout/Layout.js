@@ -1,16 +1,32 @@
-import React from 'react'
-import Header from './Header'
-import Footer from './Footer'
+import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import { Helmet } from "react-helmet";
+import { Toaster } from "react-hot-toast";
 
-const Layout = ({children}) => {
+const Layout = ({ children, title, description, keywords, author }) => {
   return (
     <div>
-        <Header/>
-        <main style={{minHeight:'65vh'}}>{children}</main>
-        <Footer/>
-        
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="author" content={author} />
+        <title>{title}</title>
+      </Helmet>
+      <Header />
+      <main style={{ minHeight: "70vh" }}>
+        {children}
+        <Toaster />
+      </main>
+      <Footer />
     </div>
-  )
-}
-
-export default Layout
+  );
+};
+Layout.defaultProps = {
+  title: "E-Commerce APP- Shop Now",
+  description: "MERN Stack Project",
+  keywords: "mern, react, node, mongodb, web application development",
+  author: "Joyanta Mondal",
+};
+export default Layout;
