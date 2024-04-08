@@ -3,9 +3,9 @@ import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import { useAuth } from "../../context/auth";
+import { useAuth } from "../../context/Auth";
 
-export const Login = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [auth, setAuth] = useAuth();
@@ -72,3 +72,4 @@ export const Login = () => {
     </Layout>
   );
 };
+export default Login;
