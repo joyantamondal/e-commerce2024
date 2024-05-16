@@ -6,6 +6,7 @@ import { Prices } from "../components/Prices";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/Cart";
 import toast from "react-hot-toast";
+import "../styles/Homepage.css";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -112,7 +113,15 @@ const HomePage = () => {
   };
   return (
     <Layout title={"All Products- Best Offers"}>
-      <div className="row mt-3">
+      {/* banner image */}
+      <img
+        src="/images/banner.png"
+        className="banner-img"
+        alt="bannerimage"
+        width={"100%"}
+      />
+      {/* banner image */}
+      <div className="container-fluid row mt-3 home-page">
         <div className="col-md-2">
           <h4 className="text-center">Filter By Category</h4>
           <div className="d-flex flex-column">

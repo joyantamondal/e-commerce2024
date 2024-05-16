@@ -7,6 +7,7 @@ import { AiFillWarning } from "react-icons/ai";
 import DropIn from "braintree-web-drop-in-react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import "../styles/CartStyles.css";
 const CartPage = () => {
   const [auth, setAuth] = useAuth();
   const [cart, setCart] = useCart();
@@ -38,7 +39,7 @@ const CartPage = () => {
       let index = myCart.findIndex((item) => item._id === pid);
       myCart.splice(index, 1);
       setCart(myCart);
-      localStorage.setItem("cart", JSON.stringify(myCart));
+      localStorage.setItem("Cart", JSON.stringify(myCart));
     } catch (error) {
       console.log(error);
     }
@@ -80,7 +81,7 @@ const CartPage = () => {
   };
   return (
     <Layout>
-      <div className="container">
+      <div className="cart-page">
         <div className="row">
           <div className="col-md-12">
             <h1 className="text-center bg-light p-2 mb-1">
@@ -108,10 +109,12 @@ const CartPage = () => {
                     height="100px"
                   />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-4">
                   <p>Name: {p.name}</p>
                   <p>Description: {p.description}</p>
                   <p>Price: {p.price} BDT</p>
+                </div>
+                <div className="col-md-4 cart-remove-btn">
                   <button
                     className="btn btn-danger"
                     onClick={() => removeCartItem(p._id)}
