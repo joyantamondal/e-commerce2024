@@ -17,6 +17,8 @@
   padding: 5px !important;
   height: 150px !important;
   margin-bottom: 5px !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
 }
 .cart-page .cart-remove-btn {
   display: flex;

@@ -4,6 +4,7 @@ import UserMenu from "../../components/Layout/UserMenu";
 import axios from "axios";
 import { useAuth } from "../../context/Auth";
 import moment from "moment";
+import "../../styles/UserOrder.css";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -24,7 +25,7 @@ const Orders = () => {
   }, [auth?.token]);
   return (
     <Layout title={"Your Orders"}>
-      <div className="container-flui p-3 m-3 dashboard">
+      <div className="container-fluid p-3 m-3 dashboard user-order">
         <div className="row">
           <div className="col-md-3">
             <UserMenu />
@@ -33,7 +34,7 @@ const Orders = () => {
             <h1 className="text-center">All Orders</h1>
             {orders?.map((o, i) => {
               return (
-                <div className="border shadow">
+                <div className="border order-box">
                   <table className="table">
                     <thead>
                       <tr>

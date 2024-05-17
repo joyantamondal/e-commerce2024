@@ -16,6 +16,8 @@
 .similar-products .card {
   background-color: rgba(128, 128, 128, 0.097);
   width: 18rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
 }
 
 .similar-products .card-name-price {
